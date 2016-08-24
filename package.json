@@ -1,6 +1,6 @@
 {
   "name": "generator-george-sails",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "homepage": "",
   "author": {
@@ -17,8 +17,8 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.23.0",
     "chalk": "^1.0.0",
+    "yeoman-generator": "^0.23.4",
     "yosay": "^1.0.0"
   },
   "devDependencies": {

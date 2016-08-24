@@ -2,7 +2,6 @@
 var yeoman = require('yeoman-generator')
 var chalk = require('chalk')
 var yosay = require('yosay')
-var purdy = require('purdy')
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
@@ -57,7 +56,7 @@ module.exports = yeoman.Base.extend({
   },
 
   app: function () {
-    purdy(this.props)
+    console.log(this.props)
   },
 
   _hidwrite: function (dir, filename, replace) {
@@ -79,7 +78,7 @@ module.exports = yeoman.Base.extend({
     // Copy the configuration files
     config: function () {
       var dir = ''
-      if (this.props.name) {
+      if (this.props.name && this.props.name !== 'test') {
         dir = this.props.name + '/'
       }
 

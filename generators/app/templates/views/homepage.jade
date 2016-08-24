@@ -1,0 +1,37 @@
+extends ./layout
+
+block body
+  style.
+    input {
+      padding: 10px;
+      font-size: 20px;
+      font-family: monospace;
+      border: 1px solid #ccc;
+      outline: none;
+      display: block;
+      margin: 0 auto;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 20px;
+      background: white;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      font-size: 18px;
+    }
+  .div.div-padding
+    h1.mono G's sails template
+    if user
+      h1 Welcome, #{user.username}
+      a(href="/logout") logout
+    else
+      form(action="/auth/local" method="POST")
+        input(type="text" name="identifier" placeholder="Email")
+        input(type="password" name="password" placeholder="Password")
+        button(type="submit") login
+      form(action="/user" method="POST")
+        input(type="text" name="email" placeholder="Email")
+        input(type="password" name="password" placeholder="Password")
+        button(type="submit") register

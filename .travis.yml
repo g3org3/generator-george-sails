@@ -3,3 +3,8 @@ node_js:
   - v6
   - v4
   - '0.12'
+notifications:
+  email: false
+
+after_success:
+  coveralls

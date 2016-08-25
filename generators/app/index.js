@@ -56,7 +56,7 @@ module.exports = yeoman.Base.extend({
   },
 
   app: function () {
-    console.log(this.props)
+    // console.log(this.props)
   },
 
   _hidwrite: function (dir, filename, replace) {
@@ -82,11 +82,6 @@ module.exports = yeoman.Base.extend({
         dir = this.props.name + '/'
       }
 
-      if (this.props.login && this.props.db === 'none') {
-        console.log('Error you must choose a db')
-        return
-      }
-
       this.fs.copy(
         this.templatePath('**/*.*'),
         this.destinationPath(dir)
@@ -94,7 +89,7 @@ module.exports = yeoman.Base.extend({
 
       this.fs.copy(
         this.templatePath('Dockerfile'),
-        this.destinationPath(dir)
+        this.destinationPath(dir + 'Dockerfile')
       )
 
       // package.json
@@ -139,11 +134,11 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function () {
-    var command = chalk.green('cd ' + this.props.name + ' && npm i')
-    console.log('----------------------------------')
-    console.log('One last step, Now run: ')
-    console.log(command)
-    console.log('----------------------------------')
+    // var command = chalk.green('cd ' + this.props.name + ' && npm i')
+    // console.log('----------------------------------')
+    // console.log('One last step, Now run: ')
+    // console.log(command)
+    // console.log('----------------------------------')
     return
     // this.installDependencies()
   }
